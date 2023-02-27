@@ -240,14 +240,12 @@ header .nav-icon {
         justify-content: center;
     }
     header {
-        /* background-color: rgba(137, 43, 226, 0.651); */
         display: flex;
         margin-bottom: 40%;
         align-items: center;
         padding: 5%;
     }
     header > a {
-        /* background-color: rgba(255, 127, 80, 0.685); */
         font-size: 20px;
         font-weight: 600;
         margin: 0;
@@ -257,7 +255,6 @@ header .nav-icon {
         align-items: center;
     }
     ul {
-        /* background-color: rgba(54, 236, 37, 0.507); */
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -270,8 +267,33 @@ header .nav-icon {
     }
     header .nav-icon {
         display: inline-flex;
-        /* background-color: rgba(29, 211, 211, 0.733); */
         font-size: 20px;
         font-weight: 600;
     }
+}
+
+.top-page img:hover {
+    animation: flipScale 2s ease-in-out alternate infinite running;
+}
+
+.middle-page button:hover {
+    animation: hangText 2s cubic-bezier(0.96,-0.02, 0, 1.02) alternate infinite running;
+}
+
+.bottom-page button:hover {
+    animation: colorSwap 1s ease-in-out alternate infinite running;
+}
+
+@keyframes flipScale {
+    100% {transform: rotateY(180deg) scale(1.8,1.8);}
+}
+
+@keyframes hangText {
+    100% {transform-origin: 0% 50%;
+          transform: rotate(20deg);}
+}
+
+@keyframes colorSwap {
+    100% {background-color: white;
+        color: #55C2D8;}
 }
